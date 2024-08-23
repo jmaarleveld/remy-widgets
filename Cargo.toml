@@ -1,0 +1,27 @@
+[package]
+name = "remy-widgets"
+description = "A library with miscellaneous utility widgets for ratatui."
+homepage = "https://github.com/jmaarleveld/remy-widgets"
+repository = "https://github.com/jmaarleveld/remy-widgets"
+documentation = "https://docs.rs/remy-widgets"
+version = "0.1.0"
+edition = "2021"
+
+
+[features]
+default = ["backend-crossterm"]
+backend-crossterm = []
+backend-termion = []
+backend-termwiz = []
+backend-test = []
+
+[dependencies]
+anyhow = "1.0.86"
+cfg-if = "1.0.0"
+
+arboard = "3.4.0"
+
+ratatui = { version = "0.28.0", features = ["unstable-widget-ref"] }
+unicode-width = "0.1.13"
+#unicode-segmentation = "1.11.0"
+#unicode-properties = "0.1.1"
